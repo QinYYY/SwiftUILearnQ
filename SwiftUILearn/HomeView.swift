@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
+    var items = ["CupcakeCorner","Bookworm","testView"]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationStack {
+            List(items,id: \.self){item in
+                
+                NavigationLink(item) {
+                    if item == "CupcakeCorner" {
+                        CupcakeCornerView(title: item)
+                    }
+                    
+                    if item == "Bookworm" {
+                        BookwormView(title: item)
+                    }
+                    
+                    if item == "testView" {
+                        TestView(title: item)
+                    }
+                }
+            }
+            .navigationTitle("Home")
+        }
     }
 }
 
