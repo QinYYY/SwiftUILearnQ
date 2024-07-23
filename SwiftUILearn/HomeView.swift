@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    var items = ["CupcakeCorner","Bookworm","testView"]
+    var items = ["CupcakeCorner","Bookworm","SwiftDataView","testView"]
     var body: some View {
         
         NavigationStack {
@@ -22,6 +22,11 @@ struct HomeView: View {
                     if item == "Bookworm" {
                         BookwormView(title: item)
                     }
+                    if item == "SwiftDataView" {
+                        SwiftDataProject()
+                    }
+                    
+                    
                     
                     if item == "testView" {
                         TestView(title: item)

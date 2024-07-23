@@ -15,18 +15,22 @@ struct SwiftUILearnApp: App {
 
         init() {
             do {
-                modelContainer = try ModelContainer(for: Book.self)
+                
+                let config1 = ModelConfiguration(for: Book.self)
+                let config2 = ModelConfiguration(for: SwiftDataUser.self,isStoredInMemoryOnly: true)
+                modelContainer = try ModelContainer(for: Book.self,SwiftDataUser.self,configurations: config1,config2)
             } catch {
                 fatalError("Could not initialize ModelContainer")
             }
         }
-    
+//    
     
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-//        .modelContainer(modelContainer)
-        .modelContainer(for: Book.self)
+        .modelContainer(modelContainer)
+//        .modelContainer(for: Book.self)
+//        .modelContainer(for:SwiftDataUser.self)
     }
 }

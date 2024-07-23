@@ -6,10 +6,41 @@
 //
 
 import SwiftUI
-
+import SwiftData
 struct SwiftDataProject: View {
+    
+    @Environment(\.modelContext) var modelContext
+    @Query(sort:\SwiftDataUser.name) var users:[SwiftDataUser]
+    
+    
+    
+    @State private var path = [SwiftDataUser]()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack(path: $path){
+            List(users){user in
+                NavigationLink(value: user){
+                    Text(user.name)
+                }
+                
+            }
+            .navigationTitle("Users")
+            .navigationDestination(for: SwiftDataUser.self) { user in
+                SwiftDataEditUserView(SDUser: user)
+            }
+            .toolbar{
+                Button("Add User",systemImage: "plus"){
+                    let user = SwiftDataUser(name: "", city: "", joinDate: .now)
+                    modelContext.insert(user)
+                    path = [user]
+                }
+                Button("delete",systemImage: "delete"){
+                    
+                }
+                
+                
+            }
+        }
     }
 }
 

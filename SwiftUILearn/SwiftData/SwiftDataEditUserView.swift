@@ -6,13 +6,41 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SwiftDataEditUserView: View {
+    @Bindable var SDUser:SwiftDataUser
+    
+    
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            
+            TextField("Name",text: $SDUser.name)
+            TextField("City",text: $SDUser.city)
+            DatePicker("Join Date",selection: $SDUser.joinDate)
+            
+        }
+        .navigationTitle("Edit User")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    SwiftDataEditUserView()
+    
+    
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: SwiftDataUser.self, configurations: config)
+        
+        let user = SwiftDataUser(name: "", city: "", joinDate: .now)
+        return SwiftDataEditUserView(SDUser: user)
+            .modelContainer(container)
+    } catch {
+        
+        return Text("Failed to create container:\(error.localizedDescription)")
+    }
+    
+    
 }
