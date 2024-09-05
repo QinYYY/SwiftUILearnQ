@@ -26,6 +26,10 @@
 		B2800B182C4F37D100E77CBE /* SwiftDataProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2800B172C4F37D100E77CBE /* SwiftDataProject.swift */; };
 		B2800B1A2C4F37E900E77CBE /* SwiftDataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2800B192C4F37E900E77CBE /* SwiftDataUser.swift */; };
 		B2800B1C2C4F388800E77CBE /* SwiftDataEditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2800B1B2C4F388800E77CBE /* SwiftDataEditUserView.swift */; };
+		B2B58BF12C85A93B001F3133 /* BucketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B58BF02C85A93B001F3133 /* BucketListView.swift */; };
+		B2B58BF32C8707DB001F3133 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B58BF22C8707DB001F3133 /* Location.swift */; };
+		B2B58BF52C870F80001F3133 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B58BF42C870F80001F3133 /* EditView.swift */; };
+		B2B58BF72C884E8B001F3133 /* LocationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B58BF62C884E8B001F3133 /* LocationResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		B2800B172C4F37D100E77CBE /* SwiftDataProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataProject.swift; sourceTree = "<group>"; };
 		B2800B192C4F37E900E77CBE /* SwiftDataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataUser.swift; sourceTree = "<group>"; };
 		B2800B1B2C4F388800E77CBE /* SwiftDataEditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataEditUserView.swift; sourceTree = "<group>"; };
+		B2B58BF02C85A93B001F3133 /* BucketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListView.swift; sourceTree = "<group>"; };
+		B2B58BF22C8707DB001F3133 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B2B58BF42C870F80001F3133 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		B2B58BF62C884E8B001F3133 /* LocationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		B20FCB5D2C47481400E648C5 /* SwiftUILearn */ = {
 			isa = PBXGroup;
 			children = (
+				B2B58BEF2C85A91C001F3133 /* BucketList */,
 				B2800B162C4F37AA00E77CBE /* SwiftData */,
 				B20FCB5E2C47481400E648C5 /* SwiftUILearnApp.swift */,
 				B20FCB602C47481400E648C5 /* ContentView.swift */,
@@ -134,6 +143,17 @@
 				B2800B1B2C4F388800E77CBE /* SwiftDataEditUserView.swift */,
 			);
 			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		B2B58BEF2C85A91C001F3133 /* BucketList */ = {
+			isa = PBXGroup;
+			children = (
+				B2B58BF02C85A93B001F3133 /* BucketListView.swift */,
+				B2B58BF22C8707DB001F3133 /* Location.swift */,
+				B2B58BF42C870F80001F3133 /* EditView.swift */,
+				B2B58BF62C884E8B001F3133 /* LocationResult.swift */,
+			);
+			path = BucketList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,11 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B58BF12C85A93B001F3133 /* BucketListView.swift in Sources */,
 				B2800B182C4F37D100E77CBE /* SwiftDataProject.swift in Sources */,
 				B23944FF2C48ABE800287764 /* BookwormView.swift in Sources */,
 				B20FCB762C47924000E648C5 /* AddressView.swift in Sources */,
 				B20FCB742C47839E00E648C5 /* Order.swift in Sources */,
 				B2800B1A2C4F37E900E77CBE /* SwiftDataUser.swift in Sources */,
+				B2B58BF52C870F80001F3133 /* EditView.swift in Sources */,
 				B23945072C48EF2800287764 /* RatingView.swift in Sources */,
 				B23945092C48F32600287764 /* EmojiRatingView.swift in Sources */,
 				B20FCB612C47481400E648C5 /* ContentView.swift in Sources */,
@@ -219,8 +241,10 @@
 				B20FCB712C47530A00E648C5 /* TestView.swift in Sources */,
 				B20FCB6F2C474E2A00E648C5 /* HomeView.swift in Sources */,
 				B23945052C48E2D300287764 /* AddBookView.swift in Sources */,
+				B2B58BF32C8707DB001F3133 /* Location.swift in Sources */,
 				B20FCB5F2C47481400E648C5 /* SwiftUILearnApp.swift in Sources */,
 				B23945032C48E20C00287764 /* Book.swift in Sources */,
+				B2B58BF72C884E8B001F3133 /* LocationResult.swift in Sources */,
 				B2800B1C2C4F388800E77CBE /* SwiftDataEditUserView.swift in Sources */,
 				B20FCB6D2C474D4400E648C5 /* CupcakeCornerView.swift in Sources */,
 			);
@@ -359,6 +383,7 @@
 				DEVELOPMENT_TEAM = 2372B22EDT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -388,6 +413,7 @@
 				DEVELOPMENT_TEAM = 2372B22EDT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
